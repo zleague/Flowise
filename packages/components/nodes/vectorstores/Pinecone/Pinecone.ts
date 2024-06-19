@@ -76,7 +76,7 @@ class Pinecone_VectorStores implements INode {
                 name: 'pineconeMetadataFilter',
                 type: 'json',
                 optional: true,
-                additionalParams: true
+                acceptVariable: true
             },
             {
                 label: 'Top K',
