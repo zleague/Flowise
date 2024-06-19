@@ -78,7 +78,7 @@ const ExpandTextDialog = ({ show, dialogProps, onCancel, onConfirm }) => {
     useEffect(() => {
         if (executeCustomFunctionNodeApi.error) {
             if (typeof executeCustomFunctionNodeApi.error === 'object' && executeCustomFunctionNodeApi.error?.response?.data) {
-                setCodeExecutedResult(executeCustomFunctionNodeApi.error?.response?.data)
+                setCodeExecutedResult(executeCustomFunctionNodeApi.error?.response?.data?.message ?? 'An error occurred')
             } else if (typeof executeCustomFunctionNodeApi.error === 'string') {
                 setCodeExecutedResult(executeCustomFunctionNodeApi.error)
             }

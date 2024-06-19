@@ -99,7 +99,6 @@ class CustomFunction_Utilities implements INode {
 
         let inputVars: ICommonObject = {}
         if (functionInputVariablesRaw) {
-            console.log('>> functionInputVariablesRaw', functionInputVariablesRaw)
             try {
                 inputVars =
                     typeof functionInputVariablesRaw === 'object' ? functionInputVariablesRaw : JSON.parse(functionInputVariablesRaw)
